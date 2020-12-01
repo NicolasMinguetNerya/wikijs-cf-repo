@@ -2,8 +2,8 @@
 
 applications:
 - name: nicolasdoc
-  memory: 768M
-  disk_quota: 1024M
+  memory: 128M
+  disk_quota: 128M
   instances: 1
   stack: cflinuxfs3
 
