@@ -21,8 +21,6 @@ applications:
 
   command: npm start
 
-  services:
-    - db-psql
 
 # Definition of Environment Variables here, will not be useable in the rest of this manifest.yml file.
 # Must use an alternative variables file and import during cf push using the operator --vars-file=mainfest-vars.yml
