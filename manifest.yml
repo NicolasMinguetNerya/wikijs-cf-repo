@@ -1,7 +1,7 @@
 ---
 
 applications:
-- name: ((cf_manual_app_name))
+- name: nicolasdoc
   memory: 768M
   disk_quota: 1024M
   instances: 1
@@ -12,8 +12,8 @@ applications:
 
   # Shown using IBM Cloud CLI (ibmcloud cf domains)
   routes:
-    - route: ((cf_manual_app_name)).((cf_manual_region)).cf.appdomain.cloud
-    - route: ((cf_manual_app_name)).apps.internal
+    - route: nicolasdoc.eu-gb.cf.appdomain.cloud
+    - route: nicolasdoc.apps.internal
 
   buildpacks:
     - https://github.com/cloudfoundry/nodejs-buildpack
@@ -22,7 +22,6 @@ applications:
   command: npm start
 
   services:
-    - ((cf_manual_db_service_name))
 
 # Definition of Environment Variables here, will not be useable in the rest of this manifest.yml file.
 # Must use an alternative variables file and import during cf push using the operator --vars-file=mainfest-vars.yml
